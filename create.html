@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Function Scope and Variable Scope</title>
+</head>
+<body>
+
+    <h2>JavaScript Scope Example</h2>
+    <button onclick="showScope()">Click Here</button>
+
+    <script>
+
+        // Global Variable
+        var college = "PSIT";
+
+        function showScope() {
+
+            // Function Scope (var)
+            var student = "Priyanshi";
+
+            // Block Scope (let)
+            let course = "B.Tech CSE";
+
+            // Block Scope (const)
+            const city = "Kanpur";
+
+            console.log("College: " + college);
+            console.log("Student: " + student);
+            console.log("Course: " + course);
+            console.log("City: " + city);
+
+            document.write("<h3>Inside Function</h3>");
+            document.write("College: " + college + "<br>");
+            document.write("Student: " + student + "<br>");
+            document.write("Course: " + course + "<br>");
+            document.write("City: " + city + "<br>");
+        }
+
+        console.log("Outside Function");
+        console.log("College: " + college);
+
+        // The following variables cannot be accessed outside the function
+        // console.log(student); // Error
+        // console.log(course);  // Error
+        // console.log(city);    // Error
+
+    </script>
+
+</body>
+</html>
